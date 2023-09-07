@@ -4,6 +4,11 @@ import personnages.Personnage;
 import combat.CompteurDeTour;
 import combat.AffichageEcran;
 
+/**
+ *
+ * @author Youan Pilon
+ */
+
 public class JeuGladiateurs {
 
     public static void main(String[] args) {
