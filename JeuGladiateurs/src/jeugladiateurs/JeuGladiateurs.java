@@ -30,7 +30,7 @@ public class JeuGladiateurs {
     bob.afficherInfosPersonnage();
     igor.afficherInfosPersonnage();
     affichage.afficherDebutCombat();
-    
+
 
     // </editor-fold>
 
