@@ -26,18 +26,18 @@ public class JeuGladiateurs {
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="Affichage pr√©-combat">
+    // <editor-fold defaultstate="collapsed" desc="Affichage prÈ-combat">
     Bob.afficherInfosPersonnage();
     Igor.afficherInfosPersonnage();
-    // TODO : Afficher le message du d√©but du combat
+    affichage.afficherDebutCombat();
     // </editor-fold>
 
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="M√©canique de combat">
-    // TODO : La boucle contenant les √©tapes du combat
-    // TODO : Apr√®s la boucle, afficher le r√©sultat du combat
+    // <editor-fold defaultstate="collapsed" desc="MÈcanique de combat">
+    // TODO : La boucle contenant les Ètapes du combat
+    // TODO : AprËs la boucle, afficher le rÈsultat du combat
     // </editor-fold>
     }
 
