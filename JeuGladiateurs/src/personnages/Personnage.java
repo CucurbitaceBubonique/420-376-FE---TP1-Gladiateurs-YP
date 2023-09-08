@@ -1,4 +1,5 @@
 package personnages;
+import java.util.Random;
 
 public class Personnage {
 
@@ -86,12 +87,12 @@ public class Personnage {
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="M√©canique de jeu">
+    // <editor-fold defaultstate="collapsed" desc="MÈcanique de jeu">
     public void afficherInfosPersonnage() {
         System.out.println();
         System.out.println(this.nom);
         System.out.println("/t Attaque : " + this.valeurMaxAttaque);
-        System.out.println("/t D√©fense : " + this.valeurDefense);
+        System.out.println("/t DÈfense : " + this.valeurDefense);
         System.out.println("/t Points de vie : " + this.pointsDeVie);
         System.out.println("/t Attaque : " + this.initiative);
         if (this.pointsDeVie > 0)
@@ -105,19 +106,20 @@ public class Personnage {
     }
 
     private int attaqueCalcul() {
-        // TODO : Retourner la valeur de l'attaque du personnage.
-        // Cette valeur est trouv√©e al√©atoirement et doit se situer entre Z√âRO et valeurMaxAttaque.
-        return 0;
+        Random rand = new Random();
+        int degats;
+        degats = rand.nextInt(this.valeurMaxAttaque - 0);
+        return degats;
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
-        // TODO : R√©cup√©rer la valeur d'attaque pour ce tour, calculer les d√©gats,
-        //modifier les points de vie du personnage cible, afficher les d√©tails
-        // sur l'attaque, tel que montr√© dans l'√©nonc√©.
+        // TODO : RÈcupÈrer la valeur d'attaque pour ce tour, calculer les dÈgats,
+        //modifier les points de vie du personnage cible, afficher les dÈtails
+        // sur l'attaque, tel que montrÈ dans l'ÈnoncÈ.
     }
 
     public void setNewInitiativeRandom() {
-        // TODO : Modifier de fa√ßon al√©atoire la valeur INI du personnage.
+        // TODO : Modifier de faÁon alÈatoire la valeur INI du personnage.
     }
     // </editor-fold>
 }
