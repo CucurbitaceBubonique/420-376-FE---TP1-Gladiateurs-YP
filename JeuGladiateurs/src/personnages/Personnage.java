@@ -91,17 +91,17 @@ public class Personnage {
     public void afficherInfosPersonnage() {
         System.out.println();
         System.out.println(this.nom);
-        System.out.println("/t Attaque : " + this.valeurMaxAttaque);
-        System.out.println("/t Défense : " + this.valeurDefense);
-        System.out.println("/t Points de vie : " + this.pointsDeVie);
-        System.out.println("/t Attaque : " + this.initiative);
+        System.out.println("\t"+ "Attaque : " + this.valeurMaxAttaque);
+        System.out.println("\t" + "Défense : " + this.valeurDefense);
+        System.out.println("\t" + "Points de vie : " + this.pointsDeVie);
+        System.out.println("\t" + "Initiative : " + this.initiative);
         if (this.pointsDeVie > 0)
         {
-            System.out.println("Statut : Vivant");
+            System.out.println("\tStatut : Vivant");
         }
         else
         {
-            System.out.println("Statut : Mort");
+            System.out.println("\tStatut : Mort");
         }
     }
 
@@ -113,9 +113,23 @@ public class Personnage {
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
-        // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
-        //modifier les points de vie du personnage cible, afficher les détails
-        // sur l'attaque, tel que montré dans l'énoncé.
+        int forceDeFrappe = this.attaqueCalcul();
+        int valeurDefense = personnageCible.valeurDefense;
+        int dommages = forceDeFrappe - valeurDefense;
+        
+        if (dommages < 0)
+        {
+            dommages = 0;
+        }
+        
+        personnageCible.pointsDeVie = personnageCible.pointsDeVie - dommages;
+        
+        System.out.println();
+        System.out.println(this.nom + " attaque avec une puissance de : " + forceDeFrappe);
+        System.out.println(personnageCible.nom + " a une défense de : " + valeurDefense);
+        System.out.println("Les dommages sont donc de : " + dommages);
+        
+        
     }
 
     public void setNewInitiativeRandom() {
