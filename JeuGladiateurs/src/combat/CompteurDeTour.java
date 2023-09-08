@@ -8,13 +8,13 @@ public class CompteurDeTour {
     // <editor-fold defaultstate="collapsed" desc="Attributs">
     int cptrTour;
     // </editor-fold>
-    
+
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
     public CompteurDeTour() {
-       this.cptrTour = 1;
+        this.cptrTour = 1;
     }
     // </editor-fold>
 
@@ -22,7 +22,7 @@ public class CompteurDeTour {
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Getters et setters">
-    public int getCptrTour() {    
+    public int getCptrTour() {
         return cptrTour;
     }
 
@@ -30,20 +30,19 @@ public class CompteurDeTour {
         this.cptrTour = cptrTour;
     }
 
-   
     // </editor-fold>
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public void augmenteTour() {
-        this.cptrTour ++;
+        this.cptrTour++;
     }
 
     public void afficheTour() {
-       System.out.println ("---------------");
-       System.out.println("TOUR ACTUEL " + this.cptrTour);
-       System.out.println ("---------------");
+        System.out.println("---------------");
+        System.out.println("TOUR ACTUEL " + this.cptrTour);
+        System.out.println("---------------");
     }
     // </editor-fold>
 }

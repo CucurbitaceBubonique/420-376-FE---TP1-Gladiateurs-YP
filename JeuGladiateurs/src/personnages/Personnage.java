@@ -1,4 +1,5 @@
 package personnages;
+
 import java.util.Random;
 
 public class Personnage {
@@ -39,7 +40,6 @@ public class Personnage {
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Getters et setters">
-
     public String getNom() {
         return nom;
     }
@@ -79,11 +79,8 @@ public class Personnage {
     public void setInitiative(int initiative) {
         this.initiative = initiative;
     }
-    
-    
-    
-    // </editor-fold>
 
+    // </editor-fold>
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
@@ -91,16 +88,13 @@ public class Personnage {
     public void afficherInfosPersonnage() {
         System.out.println();
         System.out.println(this.nom);
-        System.out.println("\t"+ "Attaque : " + this.valeurMaxAttaque);
+        System.out.println("\t" + "Attaque : " + this.valeurMaxAttaque);
         System.out.println("\t" + "Défense : " + this.valeurDefense);
         System.out.println("\t" + "Points de vie : " + this.pointsDeVie);
         System.out.println("\t" + "Initiative : " + this.initiative);
-        if (this.pointsDeVie > 0)
-        {
+        if (this.pointsDeVie > 0) {
             System.out.println("\tStatut : Vivant");
-        }
-        else
-        {
+        } else {
             System.out.println("\tStatut : Mort");
         }
     }
@@ -116,26 +110,27 @@ public class Personnage {
         int forceDeFrappe = this.attaqueCalcul();
         int valeurDefense = personnageCible.valeurDefense;
         int dommages = forceDeFrappe - valeurDefense;
-        
-        if (dommages < 0)
-        {
+
+        if (dommages < 0) {
             dommages = 0;
         }
-        
+
         personnageCible.pointsDeVie = personnageCible.pointsDeVie - dommages;
-        
+        if (personnageCible.pointsDeVie < 0) {
+            personnageCible.pointsDeVie = 0;
+        }
+
         System.out.println();
         System.out.println(this.nom + " attaque avec une puissance de : " + forceDeFrappe);
         System.out.println(personnageCible.nom + " a une défense de : " + valeurDefense);
         System.out.println("Les dommages sont donc de : " + dommages);
-        
-        
+
     }
 
     public void setNewInitiativeRandom() {
-       Random rand = new Random();
-        
-       this.initiative = rand.nextInt(100 - 0);
+        Random rand = new Random();
+
+        this.initiative = rand.nextInt(100 - 0);
     }
     // </editor-fold>
 }
