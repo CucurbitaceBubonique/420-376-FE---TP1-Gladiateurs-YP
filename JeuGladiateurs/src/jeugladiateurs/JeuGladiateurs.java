@@ -31,7 +31,6 @@ public class JeuGladiateurs {
     igor.afficherInfosPersonnage();
     affichage.afficherDebutCombat();
     
-    
 
     // </editor-fold>
 
