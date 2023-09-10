@@ -22,7 +22,7 @@ public class Mirmillon extends Personnage {
     //<editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
     public Mirmillon(String nom, int attaqueMax, int defense, int pvs, int ini) {
         this.nom = nom;
-        this.classe = "Mirmillon";
+        this.classeDeCombattant = "Mirmillon";
         this.valeurMaxAttaque = attaqueMax;
         this.valeurDefense = defense;
         this.pointsDeVie = pvs;
@@ -30,7 +30,7 @@ public class Mirmillon extends Personnage {
     }
     public Mirmillon(){
         this.nom = "";
-        this.classe = "";
+        this.classeDeCombattant = "";
         this.valeurMaxAttaque = 0;
         this.valeurDefense = 0;
         this.pointsDeVie = 0;

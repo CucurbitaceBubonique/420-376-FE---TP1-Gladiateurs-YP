@@ -9,7 +9,7 @@ public class Personnage {
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Attributs">
     protected String nom;
-    protected String classe;
+    protected String classeDeCombattant;
     protected int pointsDeVie;
     protected int valeurMaxAttaque;
     protected int valeurDefense;
@@ -22,7 +22,7 @@ public class Personnage {
     // <editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
     public Personnage(String nom, int attaqueMax, int defense, int pvs, int ini) {
         this.nom = nom;
-        this.classe = "";
+        this.classeDeCombattant = "";
         this.valeurMaxAttaque = attaqueMax;
         this.valeurDefense = defense;
         this.pointsDeVie = pvs;
@@ -31,7 +31,7 @@ public class Personnage {
 
     public Personnage() {
         this.nom = "";
-        this.classe = "";
+        this.classeDeCombattant = "";
         this.valeurMaxAttaque = 0;
         this.valeurDefense = 0;
         this.pointsDeVie = 0;
@@ -47,8 +47,8 @@ public class Personnage {
         return nom;
     }
 
-    public String getClasse() {
-        return classe;
+    public String getClasseDeCombattant() {
+        return classeDeCombattant;
     }
     
 
@@ -72,8 +72,8 @@ public class Personnage {
         this.nom = nom;
     }
 
-    public void setClasse(String classe) {
-        this.classe = classe;
+    public void setClasseDeCombattant(String classeDeCombattant) {
+        this.classeDeCombattant = classeDeCombattant;
     }
 
     public void setPointsDeVie(int pointsDeVie) {
@@ -100,7 +100,7 @@ public class Personnage {
     public void afficherInfosPersonnage() {
         System.out.println();
         System.out.println(this.nom);
-        System.out.println("Classe : " + this.classe);
+        System.out.println("Classe : " + this.classeDeCombattant);
         System.out.println("\t" + "Attaque : " + this.valeurMaxAttaque);
         System.out.println("\t" + "Défense : " + this.valeurDefense);
         System.out.println("\t" + "Points de vie : " + this.pointsDeVie);
