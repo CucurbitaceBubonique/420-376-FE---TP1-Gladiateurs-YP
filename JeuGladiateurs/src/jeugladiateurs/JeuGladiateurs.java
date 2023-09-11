@@ -4,6 +4,7 @@ import personnages.Personnage;
 import combat.CompteurDeTour;
 import combat.AffichageEcran;
 import personnages.Mirmillon;
+import personnages.Retiaire;
 
 /**
  *
@@ -20,7 +21,7 @@ public class JeuGladiateurs {
         CompteurDeTour tour = new CompteurDeTour();
         AffichageEcran affichage = new AffichageEcran();
         Mirmillon bob = new Mirmillon("Bob le malchanceux", 15, 15, 70, 15);
-        Personnage igor = new Personnage("Igor l'empaleur", 25, 5, 100, 30);
+        Retiaire igor = new Retiaire("Igor l'empaleur", 25, 5, 100, 30);
         // </editor-fold>
 
         // **************************************************************************
@@ -41,9 +42,15 @@ public class JeuGladiateurs {
             for (int i = 0; i <= 100; i++) {
                 if (i == bob.getInitiative()) {
                     bob.frapperPersonnage(igor);
+                    if (igor.getPointsDeVie() == 0) {
+                        break;
+                    }
                 }
                 if (i == igor.getInitiative()) {
                     igor.frapperPersonnage(bob);
+                    if (bob.getPointsDeVie() == 0) {
+                        break;
+                    }
                 }
 
             }

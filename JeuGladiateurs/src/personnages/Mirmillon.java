@@ -5,6 +5,7 @@
 package personnages;
 
 import java.util.Random;
+
 /**
  *
  * @author Youan Pilon
@@ -14,7 +15,7 @@ public class Mirmillon extends Personnage {
     // **************************************************************************
     // **************************************************************************
     //<editor-fold defaultstate="collapsed" desc="Attributs">
-    
+
     //</editor-fold>
     // **************************************************************************
     // **************************************************************************
@@ -28,7 +29,8 @@ public class Mirmillon extends Personnage {
         this.pointsDeVie = pvs;
         this.initiative = ini;
     }
-    public Mirmillon(){
+
+    public Mirmillon() {
         this.nom = "";
         this.classeDeCombattant = "";
         this.valeurMaxAttaque = 0;
@@ -41,7 +43,7 @@ public class Mirmillon extends Personnage {
     // **************************************************************************
     // **************************************************************************
     //<editor-fold defaultstate="collapsed" desc="Getters et Setters">
-    
+
     //</editor-fold>
     // **************************************************************************
     // **************************************************************************
@@ -49,16 +51,13 @@ public class Mirmillon extends Personnage {
     //<editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public void frapperPersonnage(Personnage personnageCible) {
         super.frapperPersonnage(personnageCible);
-        if (personnageCible.pointsDeVie <= 0)
-        {
-            System.out.println(this.nom + "décapite " + personnageCible.nom);
-        }
-        else
-        {
+        if (personnageCible.pointsDeVie <= 0) {
+            System.out.println(this.nom + " décapite " + personnageCible.nom);
+        } else {
             super.frapperPersonnage(personnageCible);
         }
     }
-    
+
     public void setNewInitiativeRandom() {
         Random rand = new Random();
         this.initiative = rand.nextInt(30 - 0);

@@ -50,7 +50,6 @@ public class Personnage {
     public String getClasseDeCombattant() {
         return classeDeCombattant;
     }
-    
 
     public int getPointsDeVie() {
         return pointsDeVie;
